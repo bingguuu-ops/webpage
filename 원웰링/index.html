@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onewelling
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"> 
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+    <link
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./image/웰링4.png">
+</head>
+<Style>
+  /*개발자노트
+  프로젝트 배경:
+  독립 후 겪은 불편함에서 시작, 1인 가구가 신고, 계약, 
+  생활 정보 등 독립 초기 과정을 쉽게 해결할 수 있도록 지원하는 플랫폼 ‘원웰링’ 기획
+
+  목적:
+  기업 홈페이지를 통해 브랜드 아이덴티티 전달, 투자자 및 협력사 설득, 브랜드 가치 및 잠재 시장 규모 소개
+
+  핵심 포인트:
+
+  1. 로고 제작 과정 및 브랜드 시각 아이덴티티
+  2. 브랜드 사용의 이유와 후킹 포인트
+  3. 브랜드 가치와 1인 가구 시장 규모
+  4. 원웰링을 선택해야 하는 이유 강조
+
+  기여: 김예지 summer (100%)
+  브랜드 스토리텔링, UI/UX 기획, 웹 퍼블리싱 및 시각적 연출 구현
+  */
+</Style>
+</head>
+<body>
+  <div class="wrap">
+   <header>
+     <div class="click">
+       <video  id="introVideo" src="./image/Comp 1_2.mp4" muted playsinline loop autoplay preload="auto"></video>
+       <i class="fa-solid fa-chevron-down"></i>
+     </div>
+      <nav>
+          <div class="logo">
+            <img src="./image/웰링4.png" alt="">
+          </div>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>어플 다운로드</li>
+              <li>협력/제휴 문의</li>
+            </ul>
+          </div>
+      </nav>
+      <div class="top">
+        TOP
+      </div>
+    </header>
+    <main>
+        <section class="s1">
+            <div class="main-text">
+                <h2>
+                    이번 <span>독립</span>은<br>
+                    <span>처음이라... </span></h2>
+            </div>
+            <div class="s1_text">
+                <p>아직은 혼자가 어색한<br>
+                    <span>초보 자취생들</span>을 위해 만들어진 <br>
+                     단, 하나의 헬퍼- <span>자취 플랫폼 </span>
+                     <br><span>&nbsp;"원-웰링!"</span>
+                </p>
+                <button class="appdownload">
+                    어플 다운로드<i class="fa-solid fa-download"></i>
+                </button>
+            </div>
+        </section>
+        <section class="s2">
+          <div class="s2_title">
+            <h2>혼자서도 괜찮아 <hr class="custom"> <br></h2>
+            <p><span>"Don't worry,</span><br> <span>ONE WELLING"</span></p>
+          </div>
+          <div class="s2image">
+            <img src="./image/워니쇼피.png" alt="">
+            <div class="s2_subtext">
+              <p>어느새 대한민국의 1인 가구<span> 805만명,</span>  혼자살기 벅찬 현대인들을 위해 탄생한
+                <span>'원웰링(ONE WELLING)'</span>은 혼자서도 괜찮다는 뜻으로 <span>1인가구들을 위한
+                  서비스를 제공합니다.</span> 작지만 든든한 손길, 원웰링이 함께합니다.</p>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="s3">
+          <h2>서비스 한 눈에 보기 👀</h2>
+          <p>원웰링의 <span>주요 서비스들</span>을 모아봤어요.
+            더 <span>자세한 설명</span>을 보고싶으시다면, 안에있는 <span>이미지를 클릭</span>해주세요.<br>
+            해당 페이지로 바로 넘어갑니다🥰
+          </p>
+          <div class="swiper service">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-section="s4">
+                <img src="./image/notice2.jpg" alt="">
+              </div>
+              <div class="swiper-slide" data-section="s5">
+                <img src="./image/notice1.jpg" alt="">
+              </div>
+              <div class="swiper-slide" data-section="s6">
+                <img src="./image/notice3.jpg" alt="">
+              </div>
+              <div class="swiper-slide" data-section="s7">
+                <img src="./image/notice4.jpg" alt="">
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <p>👉 <span>좌우</span>로 밀어보세요!
+            <br>카드를 통해 마스코트 <span>"워니"</span>의 하루를 엿볼 수 있습니다.</p>
+        </section>
+        <section class="s4">
+          <h2 class="s4-title1">공구마켓 🛒</h2>
+          <h3>혼자 사기엔 부담될 때, 같이 구매해요!</h3>
+          <p class="sub1">
+            자취러를 위한 공동구매 마켓! <br>
+            전자제품, 가구도 부담 없이 한정 기간 특별가로 만나보세요.<br>
+            <span>※ 친구 없어도 누구나 참여 가능합니다 😎</span>
+          </p>
+          <div class="together-shopping">
+            <h3>종료까지 <span class="countdown"></span></h3> 
+            <div class="productbox">
+              <div class="product">
+                <div class="img-box">
+                  <img src="./image/product.webp" alt="">
+                  <div class="icon2">Only</div>
+                  <div class="icon1"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div class="text-box">
+                  <p class="brand">미닉스 ></p>
+                  <p class="name">미닉스 음식물 처리기 더플렌더<br> PRO 가정용 분쇄기 건조기</p>
+                  <p class="price"><span class="sale">40%</span>383,400</p>
+                  <p class="star"><span>★</span>4.8(18,132)</p>
+                  <p class="person"><span>10,820</span>명 구매중</p>
+                </div>
+              </div>
+            </div>
+            <div class="clickpage">
+              <img src="./image/product.webp" alt="">
+              <div class="text-box">
+                <p class="brand">미닉스 ></p>
+                <h3>⏰ 한정판매</h3>
+                <h2>미닉스 음식물 처리기 더플랜더 PRO 가정용 분쇄기 건조기</h2>
+                <div class="ost">
+                  <div class="price-box">
+                    <div class="price">
+                      <div class="basicprice">639,000</div>
+                      <div class="saleprice"><span>40%</span>383,400 </div>
+                    </div>
+                  </div>
+                  <div class="days">
+                    <p class="day">남은시간</p>
+                    <p class="dday">14일</p>
+                  </div>
+                  <div class="people">
+                    <p class="person">구매인원</p>
+                    <p class="num">10,820명</p>
+                  </div>
+                  <i class="fa-solid fa-share-nodes"></i>
+                </div>
+                <hr>
+                <div class="tnd">
+                  <div class="buyday">
+                    <div class="buy-box">
+                      <div class="boxtitle">
+                        <p>구매 기간</p>
+                        <p>예상 발송 시작일</p>
+                      </div>
+                      <div class="subday">
+                        <p>2025.08.06 - 2025.08.17</p>
+                        <p>2025.08.20</p>
+                      </div>
+                    </div>
+                    <p class="partner"><i class="fa-solid fa-circle-info"></i>
+                      이번 기회, <span>미닉스</span>와 함께 준비했어요- 바로 배송 드려요!</p>
+                    </p>
+                  </div>
+            </div>
+              </div>
+            </div>
+          </div>
+          <small>* 본 페이지의 상품은 예시로 제공됩니다.</small>
+        </section>
+        <section class="s5">
+          <h2 class="s5-title">원웰마켓 🛍️</h2>
+          <h3>중고부터 신상품까지, 한 손에 쏙!</h3>
+          <p> 조금 더 저렴하게 사고 싶을 땐 <strong>중고거래</strong>로,<br>
+            매일 새로운 상품을 만나고 싶을 땐 <strong>마켓</strong>으로!<br>
+            필요한 모든 것을 간편하게 구매해보세요.
+          </p>
+          <div class="talk-box">
+            <div class="talk">
+              <div class="img-box">
+                <img src="./image/onisuka.png" alt="">
+              </div>
+              <div class="text-box">
+                <p class="product">오니츠카타이거 Mexico 66 Yellow Black</p>
+                <p class="price"><span class="sale">30%</span> 166,000원<span class="basic">240,000</span></p>
+              </div>
+              <div class="ic-box">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="talk">
+              <div class="img-box">
+                <img src="./image/monchichi.webp" alt="">
+              </div>
+              <div class="text-box">
+                <p class="product">Monchhichi Sprawl Monchhichi Kitten S Doll Black</p>
+                <p class="price">25,000원</p>
+              </div>
+              <div class="ic-box">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="talk">
+              <div class="img-box">
+                <img src="./image/stussy.webp" alt="">
+              </div>
+              <div class="text-box">
+                <p class="product">Stussy 8 Ball Pigment Dyed T-Shirt Black</p>
+                <p class="price">68,000원</p>
+              </div>
+              <div class="ic-box">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="talk">
+              <div class="img-box">
+                <img src="./image/matinkim.webp" alt="">
+              </div>
+              <div class="text-box">
+                <p class="product">Matin Kim Vintage Card Wallet Black</p>
+                <p class="price"><span class="sale">18%</span>31,000원<span class="basic">38,000</span></p>
+              </div>
+              <div class="ic-box">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </div>
+          <p>하트를 눌러 관심있는 상품을 찜하세요!</p>
+          <small>* 본 페이지의 상품은 예시로 제공됩니다.</small>
+        </section>
+        <section class="s6">
+          <h2 class="s5-title">혼자도 괜찮아 😊</h2>
+          <h3>매주 도착하는 우리를 위한 매거진</h3>
+          <p>경제, 취미, 트렌드, 이슈까지!  
+            놓치기 쉬운 이야기들을 한눈에 정리해드려요.</p>
+            <p><span>*큰 이미지를 클릭시 홈페이지로 이동합니다.*</span></p>
+          <div class="magazine-box">
+            <div class="magazine">
+              <div class="subscribe"><a href="#">보러가기</a></div>
+              <div class="m-img">
+                <img src="./image/news1.jpg" alt="">
+                <img src="./image/news2.jpg" alt="">
+                <!-- <img src="./image//image/31.jpg" alt=""> -->
+              </div>
+            </div>
+            <div class="cover">
+              <div class="img-box">
+                <img src="./image/newletter2.png" alt="">
+                <p class="cta-text">👇 터치해서 보기</p>
+              </div>
+              <div class="img-box">
+                <img src="./image/newletter1.png" alt="">
+                <p class="cta-text">👇 터치해서 보기</p>
+              </div>
+              <!-- <img src="./image/newletter3.png" alt=""> -->
+            </div>
+          </div>
+        </section>
+        <section class="s7">
+          <h2 class="s5-title">웰링톡 & 클래스🙆</h2>
+          <h3>외로운 우리들의 소통창구<br></h3>
+          <p>낯설지만 따뜻한 시작!
+            커뮤니티, 클래스, 취미 모임까지
+            자취러들을 위한 소셜 놀이터가 열렸어요.
+            오늘 하루, 누군가와 연결되고 싶은 순간이라면
+            커뮤니티와 클래스에서 함께 해봐요!</p>
+          <div class="swiper review">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="./image/face6.png" alt="">
+                  <div class="profile">📍서울 마포, <strong>지우</strong> · 28세 </div>
+                </div>
+                <div class="text-box">
+                  "원래는 집돌이였는데, 이제는 클래스 요정!
+                  매주 수업날만 기다려요."
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="./image/face1.png" alt="">
+                  <div class="profile">📍서울 성수, <strong>예빈</strong> · 26세 </div>
+                </div>
+                <div class="text-box">
+                  "처음엔 그냥 구경만 하려고 했거든요?
+                  근데 눈 마주친 사람 다 친구됨.
+                  무서운(?) 곳이네요… 재밌어서.""
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="./image/face12.png" alt="">
+                  <div class="profile">📍경기 성남, <strong>민재</strong> · 30세 </div>
+                </div>
+                <div class="text-box">
+                  "클래스를 듣다 보니 웃다가 하루가 끝나요.
+                  덕분에 월요병이 사라졌습니다.
+                  완전 힐링 클래스예요!"
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="./image/face3.png" alt="">
+                  <div class="profile">📍서울 동작, <strong>서현</strong> · 27세 </div>
+                </div>
+                <div class="text-box">
+                  "친구 따라 왔다가 인생 커뮤니티 만났어요.
+                  이제는 제가 친구 데려와요.
+                  이쯤 되면 영업사원 아닌가요?"
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="./image/face5.png" alt="">
+                  <div class="profile">📍인천 연수, <strong>진현</strong> · 25세 </div>
+                </div>
+                <div class="text-box">
+                  "그냥 심심해서 들어왔는데
+                  어느새 일정표에 자동 저장됨;;
+                  나도 모르게 애정 생김 뭐냐고요."
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-box">
+                  <img src="./image/face4.png" alt="">
+                  <div class="profile">📍경기 수원, <strong>유진</strong> · 26세 </div>
+                </div>
+                <div class="text-box">
+                  "낯가림 심해서 벽이랑만 대화하는데,
+                  여기선 하트 누르다 입 풀림.
+                  지금은 단톡방 운영 중!"
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="logo">
+          <img src="./image/wellinglogo.png" alt="">
+        </div>
+        <div class="text-box">
+          <h2>혼자서도 충분하니까</h2>
+          <p>Don't worry<br>ONE WELLING</p>
+        </div>
+        <div class="ic-box">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-kakao-talk"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="information">
+          <p>(주)원웰링</p>
+          <p>주소: 서울특별시 마포구 가나대로 00 가나빌딩</p>
+          <p>대표자명: 김땡땡 사업자등록번호: 000-00-00000</p>
+          <p><span><a href="#">사업자정보확인</a></span> 통신판매업: 0000-서울마포-0000</p>
+          <p>MAIL: <span>help@onewelling.com</span></p>
+        </div>
+      </footer>
+  </div>
+
+  <script>
+    //hamburger menu
+
+    let cmenu = document.querySelector(".menu")
+    let hamburger = document.querySelector(".hamburger")
+    if(hamburger && cmenu){
+      hamburger.addEventListener("click",()=>{
+        cmenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      })
+    }
+
+    //top 버튼
+    let topbt = document.querySelector("header .top")
+    let de = document.documentElement
+    let section = document.querySelectorAll("section")
+    let arr = []
+    let footer = document.querySelector("footer").offsetTop
+    let hamburgerbar = document.querySelectorAll(".hamburger span")
+
+    console.log(footer)
+    for(let i of section){
+      arr.push(i.offsetTop)
+    }
+    window.addEventListener("scroll", () => {
+      topbt.classList.toggle("active", de.scrollTop >= 300);
+    });
+
+    window.addEventListener("scroll", () => {
+      if(de.scrollTop>=7200){
+        topbt.style.color = "#fafafa"
+        hamburgerbar.forEach(bar => {
+      bar.style.backgroundColor = "#fafafa";
+      });
+      }
+      else{topbt.style.color = "#222222"
+      hamburgerbar.forEach(bar => {
+      bar.style.backgroundColor = "#222222";
+      });
+      }
+    });
+
+    topbt.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // 슬라이드 애니메이션
+
+        const slideObserver = new IntersectionObserver((entries2) => {
+      entries2.forEach(entry2 => {
+        if (entry2.isIntersecting) {
+          entry2.target.classList.add("show-section");
+        }
+      });
+    }, { threshold: 0.2 });
+
+      section.forEach(section => slideObserver.observe(section));
+    // 섹션2 글자 애니메이션
+    const hr = document.querySelector(".custom")
+    const s2p = document.querySelector(".s2 .s2_title p")
+    
+    const typing = new IntersectionObserver((entries)=>{
+      entries.forEach(entry =>{
+        if(entry.isIntersecting){
+          hr.classList.add("active");
+          s2p.classList.add("active");
+        }
+        else{
+          hr.classList.remove("active");
+          s2p.classList.remove("active");
+        }
+      })
+    },{threshold: 0.3})
+    const target = document.querySelector('.s2_title');
+    typing.observe(target);
+  
+    //섹션3 스와이퍼 슬라이드
+    let swiper = new Swiper(".service", {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 20,
+      autoplay: { delay: 2500 },
+      scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+  },
+    });
+      //섹션3
+      document.querySelectorAll('.swiper-slide').forEach(slide => {
+  slide.addEventListener('click', () => {
+    const targetClass = slide.getAttribute('data-section');
+    const target = document.querySelector(`.${targetClass}`);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+    //section4 타이머
+  function startCountdown(deadline) {
+  const countdownElement = document.querySelector(".s4 .countdown");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const end = new Date(deadline).getTime();
+    const diff = end - now;
+
+    if (diff <= 0) {
+      countdownElement.innerHTML = "마감되었습니다";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+  }
+
+  updateCountdown(); // 처음 1회 실행
+  const timer = setInterval(updateCountdown, 1000); // 1초마다 업데이트
+}
+
+// 원하는 종료 시점 설정 (예: 2025년 8월 15일 18시)
+startCountdown("2025-09-20T18:00:00");
+
+  // section 5
+  let talks = document.querySelectorAll(".s5 .talk-box .talk")
+
+  const talking = new IntersectionObserver((entries3)=>{
+    entries3.forEach(entry3=>{
+      if(entry3.isIntersecting){
+        entry3.target.classList.add("active");
+      }
+    });
+  },{threshold:0.2});
+  talks.forEach(talk => talking.observe(talk));
+
+  // section5 아이콘
+  let hearts = document.querySelectorAll(".s5 .talk .ic-box i:last-child")
+  
+  hearts.forEach(heart =>{
+    heart.addEventListener("click",()=>{
+      heart.classList.toggle("fa-regular");
+      heart.classList.toggle("fa-solid");
+      heart.classList.toggle("active"); 
+    })
+  })
+
+  // section6 클릭시 이미지 변경
+  let cover = document.querySelectorAll(".s6 .cover img");
+  let magazine = document.querySelector(".s6 .magazine .m-img");
+  let currentIndex = 0;
+
+    // mwidth는 함수 안에서 항상 최신값으로 계산되도록
+  function updateMagazinePosition(index) {
+    let mwidth = magazine.offsetWidth / 3; // 현재 넓이 계산
+    magazine.style.marginLeft = -(mwidth * index) + "px";
+    currentIndex = index;
+  }
+
+  // 커버 클릭 이벤트 설정
+  cover.forEach((img, i) => {
+    img.addEventListener("click", () => {
+      updateMagazinePosition(i);
+      console.log("clicked:", i);
+    });
+  });
+
+  // 리사이즈될 때 현재 위치 유지
+  window.addEventListener("resize", () => {
+    updateMagazinePosition(currentIndex);
+  });
+  // section7 swiper
+  let swipers7 = new Swiper(".review", {
+    slidesPerView: 1.8,  
+    loop:true,
+    spaceBetween:40,
+    centeredSlides: true,
+    speed: 800,    
+    autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+    });
+
+  
+  </script>
+</body>
+</html>
