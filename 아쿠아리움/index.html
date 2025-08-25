@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aqurium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    /*개발자노트
+    프로젝트 목표: 아쿠아리움 방문객 유입과 티켓 판매를 최적화하는 홈페이지 구축
+
+    타깃:
+    메인: 30~40대 직장인 부부
+    서브: 학교 현장체험학습 선생님, 데이트하는 커플
+
+    UI/UX 전략:
+    1. 메인 컬러 블루, 포인트 컬러 코랄로 브랜드 무드 강조
+    2. 티켓 구매, 이벤트, 시설, 단체 구매 순으로 행동 기반 네비게이션 설계
+    3. 스크롤 시에도 티켓 구매 버튼 고정, 운영시간·혼잡도·이벤트 캘린더 표시로 접근성 향상
+    4. 사진·인증샷 리뷰 활용으로 감성적 경험 및 재방문 유도
+
+    페르소나 예시: 34세 맞벌이 직장인, 주말에 자녀와 특별한 경험을 찾는 부모
+
+    기여: 김예지 summer 100% 
+    UI/UX 설계, 행동 기반 네비게이션, 브랜드 경험 중심 화면 구성, 웹 퍼블리싱
+    */
+</style>
+<body>
+   <div class="wrap">
+    <header>
+        <nav>
+            <div class="mob">
+                <div class="ticket">
+                    <i class="fa-solid fa-ticket"> </i>
+                    <p>구매하기</p>
+                </div>
+                <div class="logo">
+                    <i class="fa-solid fa-otter"></i>
+                    <p>aqurium</p>
+                </div>
+                <div class="right">
+                    <p>KO</p>
+                    <i class="fa-solid fa-bars menu-toggle"></i>
+                </div>
+                <div class="mob-menu">
+                    <div class="ic-box">
+                        <i class="fa-regular fa-house"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <p>내 예약</p>
+                    </div>
+                    <div class="time">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>금일 운영시간: 10:00 - 20:00<br>
+                            <span>마지막 입장 시간 19:00</span></p>
+                    </div>
+                    <div class="menu-box">
+                        <div class="m-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-ticket"></i>
+                                <p>입장권 및 프로모션</p>
+                            </div>
+                        </div>
+                        <div class="m-box">
+                            <div class="icon">
+                                <i class="fa-solid fa-people-group"></i>
+                                <p>단체 입장권 예약</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="mobile_menu">
+                        <li class="title"><span><i class="fa-solid fa-plus"></i><p>내부 & 공연안내</p></span>
+                            <ul class="sub_mobmenu">
+                                <li class="sub_title"><p>테마존</p>
+                                    <ul class="ss_mob">
+                                        <li>깊은 바다 탐험대</li>
+                                        <li>반짝반짝 열대 바다</li>
+                                        <li>펭귄 놀이터</li>
+                                        <li>숲속 강물 나라</li>
+                                        <li>머리 위 바다</li>
+                                        <li>꿈꾸는 해파리방</li>
+                                        <li>더보기</li>
+                                    </ul>
+                                </li>
+                                <li class="sub_title" ><p>아쿠아리움 친구들</p>
+                                    <ul class="ss_mob">
+                                        <li>전시생물 소개</li>
+                                    </ul>
+                                </li>
+                                <li class="sub_title"><p>이벤트</p>
+                                    <ul class="ss_mob">
+                                        <li>체험 캘린더</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="title"><span><i class="fa-solid fa-plus"></i><p>방문 전 정보</p></span>
+                            <ul class="sub_mobmenu">
+                                <li class="sub_title"><p>이용안내</p>
+                                    <ul class="ss_mob">
+                                        <li>운영시간</li>
+                                        <li>동선 안내</li>
+                                        <li>위치 & 교통주차</li>
+                                        <li>편의시설</li>
+                                    </ul>
+                                </li>
+                                <li class="sub_title"><p>고객센터</p>
+                                    <ul class="ss_mob">
+                                        <li>자주 묻는 질문</li>
+                                        <li>1:1 문의하기</li>
+                                        <li>연간회원권 안내</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="mob_sns">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-kakao-talk"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="pc">
+                <div class="logo">
+                    <i class="fa-solid fa-otter"></i>
+                    <p>aqurium</p>
+                </div>
+                <div class="right-menu">
+                    <p>예약 문의</p>
+                    <p>편의시설</p>
+                    <p>오시는 길</p>
+                    <p>KO</p>
+                </div>
+            </div>
+        </nav>
+        <div class="swiper main-board">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image/animal1.jpg" alt="">
+                    <div class="t-box">
+                        <p class="source">물속에서 즐기는 산책</p>
+                        <p class="title">어서오세요 아쿠아리움에!(with. 동물의숲)</p>
+                        <P class="button">자세히 보기</P>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/soodal2.jpg" alt="">
+                    <div class="t-box">
+                        <p class="source">아쿠아리움의 대표 귀요미</p>
+                        <p class="title">수달씨와의 식사를 체험할 시간</p>
+                        <p class="button">자세히 보기</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/ehfrhfo.jpg" alt="">
+                    <div class="t-box">
+                        <p class="source">공주님에게 어떤 고민이 있을까요?</p>
+                        <p class="title">인어공주님의 고민상담 스토리</p>
+                        <P class="button">자세히 보기</P>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="buy-ticket">티켓 구매하기</div>
+        </div>
+        <div class="quest-button">Top</div>
+    </header>
+    <main>
+        <section class="s1">
+            <h2>오늘의 아쿠아리움</h2>
+            <div class="table">
+                <div class="left-time aq-box">
+                    <p>운영 시간</p>
+                    <p class="time">10:00 - 20:00</p>
+                    <P class="off">(마지막 입장 시간 19:00)</P>
+                </div>
+                <div class="right-busy aq-box">
+                    <p>혼잡도</p>
+                    <p class="time">A</p>
+                    <p class="off">A>B>C</p>
+                </div>
+            </div>
+        </section>
+        <section class="s2-1">
+            <div class="button-box">
+                <div class="upper">
+                    <p>입장권/프로모션</p>
+                </div>
+                <div class="downer">
+                    <div class="box">
+                        <div class="s-up">
+                            <p>프로그램</p>
+                        </div>
+                        <div class="s-down">
+                            <p>오시는길</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="s-up">
+                            <p>공지사항</p>
+                        </div>
+                        <div class="s-down">
+                            <p>편의시설</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>오늘의 프로그램</h2>
+            <div class="program">
+                <i class="fa-solid fa-otter"></i>
+                <ul class="today">
+                    <li>14:30 해달 먹이주기</li>
+                    <li>16:20 해양생물 토크쇼</li>
+                    <li>17:30 해달 먹이주기</li>
+                    <li>18:30 야간 수중공연</li>
+                </ul>
+            </div>
+        </section>
+        <section class="s2">
+            <h2>이벤트 및 캘린더</h2>
+            <div id="calendar-box"></div>
+            <div id="event-detail" style="display:none; border:1px solid #ccc; margin-top:20px; padding:10px; background-color: #88d9ff; border-radius: 20px;">
+                <h3>이벤트 상세 내용</h3>
+                <p id="event-text"></p>
+        </section>
+        <section class="s3">
+            <h2>티켓 구매하기</h2>
+            <div class="con">
+                <div class="ticket">
+                    <div class="left">
+                        <img src="./image/animal3.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="t-box">
+                            <p class="title">동물의 숲 산책 PKG</p>
+                            <p class="source">입장권 + 키링증정</p>
+                            <p class="price">21,000~</p>
+                            <div class="bt">구매하기</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket">
+                    <div class="left">
+                        <img src="./image/album.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="t-box">
+                            <p class="title"> 포토앨범 PKG</p>
+                            <p class="source">입장권 + 키링증정</p>
+                            <p class="price">24,000~</p>
+                            <div class="bt">구매하기</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket">
+                    <div class="left">
+                        <img src="./image/card.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="t-box">
+                            <p class="title">모바일 온라인 예매</p>
+                            <p class="source">온라인/모바일 예매 우대</p>
+                            <p class="price">27,500~</p>
+                            <div class="bt">구매하기</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket">
+                    <div class="left">
+                        <img src="./image/ticket.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="t-box">
+                            <p class="title">나이트워크인 예매</p>
+                            <p class="source">오후 4시 이후 입장</p>
+                            <p class="price">21,000~</p>
+                            <div class="bt">구매하기</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="s4">
+            <h2>추억의 아쿠아리움</h2>
+            <div class="text-box">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-kakao-talk"></i>
+            </div>
+            <div class="swiper remember">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./image/photo1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo6.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo7.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/photo8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s5">
+            <div class="event">
+                <div class="i-box">
+                    <img src="./image/animal0.jpg" alt="">
+                </div>
+                    <div class="text-box">
+                        <p class="title">아쿠아리움 with 동물의숲</p>
+                        <p class="source">주민들과 함께하는 물 속 산책길 <br>곳곳에 숨어있는 주민들도 찾아보고 사진도 찍어봐요!<br>
+                                          선착순 방문 시, 귀여운 부채를 선물로 드려요!</p>
+                        <div class="bt">자세히 보기</div>
+                    </div>
+            </div>
+            <div class="event">
+                <div class="text-box">
+                    <p class="title">수달과 함께 먹이주기 타임</p>
+                    <p class="source">2시30분, 5시30분 딱 2번 나타나는 수달씨<br>
+                        직접 먹이도 주고, 민져보고, 눈으로 여러 장면을 포착해보세요!</p>
+                        <div class="bt">자세히 보기</div>
+                    </div>
+                    <div class="i-box">
+                        <img src="./image/soodal.jpg" alt="">
+                    </div>
+            </div>
+            <div class="event">
+                <div class="i-box">
+                    <img src="./image/fish.jpg" alt="">
+                </div>
+                    <div class="text-box">
+                        <p class="title">여러가지 해양 생물들</p>
+                        <p class="source">강,바다,열대야 물고기부터 보기힘든 희귀종까지<br>
+                            어디서도 체험하지 못할 경험들을 즐겨보세요!</p>
+                        <div class="bt">자세히 보기</div>
+                    </div>
+            </div>
+        </section>
+        <section class="s6">
+            <h2>관람 안내</h2>
+            <img src="./image/map.jpg" alt="">
+        </section>
+    </main>
+        <footer>
+            <div class="end">
+                <div class="logo">
+                    <i class="fa-solid fa-otter"></i>
+                    <p>aqurium</p>
+                </div>
+                <div class="n-box">
+                    <div class="notice">
+                        <div class="h-box">
+                            <h3>이용안내</h3>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                        <div class="p-box">
+                            <p>영업시간・휴업일</p>
+                            <p>일반 입장권</p>
+                            <p>1년 무제한 이용권</p>
+                            <p>단체 예약</p>
+                        </div>
+                    </div>
+                    <div class="notice">
+                        <div class="h-box">
+                            <h3>방문 전 정보</h3>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                        <div class="p-box">
+                            <p>위치 & 교통주차</p>
+                            <p>자주묻는 질문</p>
+                            <p>편의시설</p>
+                        </div>
+                    </div>
+                    <div class="notice">
+                        <div class="h-box">
+                            <h3>회사소개</h3>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                        <div class="p-box">
+                            <p>인사말</p>
+                            <p>연혁・기업비전</p>
+                            <p>제휴문의</p>
+                        </div>
+                    </div>
+                    <div class="notice">
+                        <div class="h-box">
+                            <h3>정책</h3>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                        <div class="p-box">
+                            <p>이용약관</p>
+                            <p>개인정보 처리방침</p>
+                            <p>개인정보 수집 및 처리에 대하 동의</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-box">
+                    <div class="left">
+                        <p>아쿠아리움 주소</p>
+                        <p>아쿠아리움 회사 | 사업자등록 번호 | 000000@gmail.com | 대표이사 홍길동</p>
+                        <p>대표전화 010-0000-0000 | 팩스 00-000-0000 | 통신판매업신고 0000-서울중구-00000호</p>
+                        <p>	© 2025 Aquarium. All rights reserved.</p>
+                    </div>
+                    <div class="sns">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-kakao-talk"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+   <script>
+    let swiper = new Swiper(".main-board", {
+      cssMode: true,
+      autoplay: { delay: 3500 },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+    var swiper2 = new Swiper(".remember", {
+        slidesPerView: 3.5,
+        loop : true,
+        spaceBetween:30,
+
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+    let calendarEl = document.getElementById('calendar-box');
+    let eventDetail = document.getElementById('event-detail');
+    let eventText = document.getElementById('event-text');
+
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    locale: 'ko',
+    events: [
+      {
+        id: '1',
+        title: '수달 활동체험',
+        start: '2025-08-18',
+        description: '수달과 함께하는 재미있는 활동 체험 행사가 진행됩니다.'
+      },
+      {
+        id: '2',
+        title: '야간 수중 전시',
+        start: '2025-08-22',
+        description: '밤에 진행되는 특별한 수중 전시 이벤트가 진행됩니다.'
+      }
+    ],
+    eventClick: function(info) {
+      if (eventDetail && eventText) {
+        eventText.textContent = info.event.extendedProps.description || '상세 내용이 없습니다.';
+        eventDetail.style.display = 'block';
+      }
+    }
+  });
+
+  calendar.render();
+});
+    if(window.innerWidth<=750){
+    let coupon = document.querySelector(".main-board .swiper-slide .t-box .button").innerHTML = "티켓 구매하기"};
+    let ticket1 = document.querySelector(".buy-ticket")
+   
+//여기서부터  
+    let scrollHandler = () => {
+        if (window.innerWidth > 750) {
+            ticket1.style.display = window.pageYOffset > 100 ? "none" : "block";
+        }
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth <= 750) {
+            ticket1.style.display = "none";
+        } else {
+            ticket1.style.display = window.pageYOffset > 100 ? "none" : "block";
+        }
+    });
+    if (window.innerWidth <= 750) {
+        ticket1.style.display = "none";
+    } else {
+        ticket1.style.display = window.pageYOffset > 100 ? "none" : "block";
+    }
+//여기까지
+$(function() {
+    let arrows = $("footer .end .n-box .notice .h-box i");
+    let pboxes = $("footer .end .n-box .notice .p-box");
+
+    let up = $(".quest-button");
+
+up.click(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 200) {
+        $(".quest-button").fadeIn();
+    } else {
+        $(".quest-button").fadeOut();
+    }
+});
+    function setupNotice() {
+        if(window.innerWidth <= 750){
+            arrows.show();
+            pboxes.hide(); // 초기엔 모두 숨기기
+            arrows.removeClass("rotate");
+
+            arrows.off("click").on("click", function() {
+                let idx = arrows.index($(this));
+                let target = pboxes.eq(idx);
+
+                if(target.is(":animated")) return; // 애니메이션 중복 방지
+
+                arrows.removeClass("rotate");
+
+                if (target.is(":visible")) {
+                    target.slideUp();
+                } else {
+                    pboxes.slideUp();
+                    target.slideDown();
+                    $(this).addClass("rotate");
+                }
+            });
+        } else {
+            arrows.hide();
+            pboxes.show(); // PC 모드일 때 모두 보여주기
+            arrows.removeClass("rotate");
+            arrows.off("click");
+        }
+    }
+
+    setupNotice();
+
+    $(window).resize(function(){
+        setupNotice();
+    });
+});
+const bars = document.querySelector(".mob .right i:last-child");
+const mobmenu = document.querySelector(".mob-menu");
+
+let isOpen = false;
+
+bars.addEventListener("click", () => {
+    if (!isOpen) {
+        mobmenu.classList.add("active");
+
+        bars.classList.remove("fa-bars");
+        bars.classList.add("fa-xmark");
+    } else {
+        mobmenu.classList.remove("active");
+
+        bars.classList.remove("fa-xmark");
+        bars.classList.add("fa-bars");
+
+        // 서브메뉴 모두 닫기 + 아이콘 초기화 (메뉴 닫힐 때 서브 메뉴 리셋)
+        document.querySelectorAll(".sub_mobmenu").forEach(menu => {
+            menu.style.maxHeight = null;
+            menu.style.opacity = 0;
+            menu.classList.remove("active");
+        });
+        document.querySelectorAll(".mobile_menu .title > span i").forEach(ic => {
+            ic.classList.remove("fa-minus", "rotate");
+            ic.classList.add("fa-plus");
+        });
+    }
+    isOpen = !isOpen;
+});
+
+const accordionTitles = document.querySelectorAll(".mobile_menu .title > span");
+
+accordionTitles.forEach(title => {
+    title.addEventListener("click", () => {
+        const icon = title.querySelector("i");
+        const submenu = title.nextElementSibling;
+
+        const isActive = submenu.classList.contains("active");
+
+        // 모든 서브메뉴 닫기 및 아이콘 초기화
+        document.querySelectorAll(".sub_mobmenu").forEach(menu => {
+            menu.classList.remove("active");
+            menu.style.maxHeight = null;
+            menu.style.opacity = 0;
+        });
+        document.querySelectorAll(".mobile_menu .title > span i").forEach(ic => {
+            ic.classList.remove("fa-minus", "rotate");
+            ic.classList.add("fa-plus");
+        });
+
+        if (!isActive) {
+            submenu.classList.add("active");
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
+            submenu.style.opacity = 1;
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus", "rotate");
+        }
+    });
+});
+    document.addEventListener("DOMContentLoaded", function () {
+        const textBoxes = document.querySelectorAll(".s5 .text-box");
+
+        const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add("show");
+            }, index * 200); // 하나씩 순차적으로 등장
+            obs.unobserve(entry.target); // 한 번만 실행
+            }
+        });
+        }, {
+        threshold: 0.3
+        });
+
+        textBoxes.forEach(box => observer.observe(box));
+    });
+//  
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const mobMenu = document.querySelector(".mob-menu");
+
+  let isOpen = false;
+  let animating = false; // 애니메이션 중복 방지용 플래그
+
+  toggleBtn.addEventListener("click", () => {
+    if (animating) return; // 애니메이션이 끝나기 전에는 무시
+    animating = true;
+
+    toggleBtn.classList.add("rotate-out");
+
+    setTimeout(() => {
+      // 아이콘 변경
+      if (!isOpen) {
+        toggleBtn.classList.replace("fa-bars", "fa-xmark");
+      } else {
+        toggleBtn.classList.replace("fa-xmark", "fa-bars");
+      }
+
+      // 메뉴 토글
+      mobMenu.classList.toggle("on");
+
+      // rotate-out 제거해서 rotate-in 상태 유지
+      toggleBtn.classList.remove("rotate-out");
+
+      // isOpen 상태 변경
+      isOpen = !isOpen;
+
+      // 애니메이션이 끝났으니 플래그 해제
+      animating = false;
+    }, 300); // CSS transition 시간과 맞추기
+  });
+});
+  </script>
+</body>
+</html>
