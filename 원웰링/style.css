@@ -58,7 +58,8 @@
       display: block;
     }
     nav .logo {
-      width: 200px;
+      width: 10%;
+      align-content:center;
       z-index: 1000;
     }
     nav .logo> img{
