@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIGELLE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="G.png">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<style>
+    /*개발자노트
+  
+    프로젝트 목표: 20~30대 여성층을 대상으로 브랜드 충성고객과 신규 고객 유입을 목표로 홈페이지 구축
+
+    주요 전략:
+
+    1. 브랜드 무드 강조 및 브랜드 네임 ‘지젤’ 반복 노출로 각인
+    2. 충성고객을 위해 신상품 상단 배치
+    3. 구매 장벽 최소화를 위해 착장 이미지 제공, 제품 확인 용이성 확보
+
+    기여: 김예지 summer (100%)
+    UI/UX 설계, 브랜드 경험 중심 화면 구성, 웹 퍼블리싱 및 시각적 연출
+    */
+</style>
+<body>
+    <div class="wrap">
+        <header>
+           <div class="swiper main_image">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video src="image/dirty1.mp4" loading="lazy" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/gigelle2.jpg" loading="lazy" alt="">
+                    </div>
+                </div>
+           </div>
+           <nav>
+                    <div class="mob">
+                        <div class="left">
+                            <i class="fa-solid fa-bars" id="hamburger"></i>
+                            </div>
+                            <div class="logo">GIGELLE</div>
+                            <div class="right">
+                                <p>CART(0)</p>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="mob_menu">
+                                <ul class="m_menu">
+                                    <li id="shop-arrow"><p>SHOP</p><i class="fa-solid fa-chevron-right" ></i></li>
+                                    <li id="collection-arrow"><p>COLLECTION</p><i class="fa-solid fa-chevron-right" ></i></li>
+                                    <li>ABOUT</li>
+                                    <li><p>WISH LIST <span>0</span></p></li>
+                                </ul>
+                                <div class="account-box">
+                                    <p class="account">MY ACCOUNT</p>
+                                    <p class="kakao">KAKAO</p>
+                                    <p class="insta">INSTAGRAM</p>
+                                </div>
+                            </div>
+                            <div class="shop_menu" id="shopMenu">
+                                <ul class="shop">
+                                    <li><p>SHOP <span id="shop-back">BACK</span></p></li>
+                                    <li class="title">WOMEN
+                                        <ul class="s_menu">
+                                            <li>NEW DROP</li>
+                                            <li>HOT ISSUE</li>
+                                            <li>ALL</li>
+                                            <li>TOPS</li>
+                                            <li>BOTTOMS</li>
+                                            <li>SKIRTS</li>
+                                            <li>DRESS</li>
+                                        </ul>
+                                    </li>
+                                    <li class="title">CLASSIC
+                                        <ul class="s_menu">
+                                            <li>NEW DROP</li>
+                                            <li>ALL</li>
+                                            <li>TOPS</li>
+                                            <li>BOTTOMS</li>
+                                            <li>SKIRTS</li>
+                                            <li>DRESS</li>
+                                        </ul>
+                                    </li>
+                                    <li class="title">ACC
+                                        <ul class="s_menu">
+                                            <li>BAGS</li>
+                                            <li>SUNGLASSES</li>
+                                            <li>SHOES</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="collection" id="collectionMenu">
+                                <ul class="c_menu">
+                                    <li><p>COLEECTION<span id="collection-back">BACK</span></p>
+                                        <ul class="sub_collect">
+                                            <li>2025SS</li>
+                                            <li>2025FW</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pc">
+                        <div class="logo">GIGELLE</div>
+                        <ul class="menu">
+                            <li>WOMEN
+                                <ul class="s-menu">
+                                    <li>NEW DROP</li>
+                                    <li>HOT ISSUE</li>
+                                    <li>ALL</li>
+                                    <li>TOPS</li>
+                                    <li>BOTTOMS</li>
+                                    <li>SKIRTS</li>
+                                    <li>DRESS</li>
+                                </ul>
+                            </li>
+                            <li>CLASSIC
+                                <ul class="s-menu">
+                                    <li>NEW DROP</li>
+                                    <li>ALL</li>
+                                    <li>TOPS</li>
+                                    <li>BOTTOMS</li>
+                                    <li>SKIRTS</li>
+                                    <li>DRESS</li>
+                                </ul>
+                            </li>
+                            <li>ACC
+                                <ul class="s-menu">
+                                    <li>BAG</li>
+                                    <li>SUNGLASSES</li>
+                                    <li>SHOES</li>
+                                </ul>
+                            </li>
+                            <li>COLLECTION
+                                <ul class="s-menu">
+                                    <li>2025SS</li>
+                                    <li>2025FW</li>
+                                </ul>
+                            </li>
+                            <li>ABOUT
+                            </li>
+                        </ul>
+                        <div class="ic-box">
+                            <p>CART(0)</p>
+                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+            </nav>
+        </header>
+        <main>
+            <section class="s1">
+                <div class="text-box">
+                    <h2>NEW DROP</h2>
+                    <p class="all">전체보기▶︎</p>
+                </div>
+               <div class="swiper newdrop">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="image/g5.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Modern Cutout Dress</p>
+                                <div class="p-box">
+                                    <div class="sale">180,500</div>
+                                    <p class="price">190,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g11.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Leopard shirt</p>
+                                <div class="p-box">
+                                    <div class="sale">49,500</div>
+                                    <p class="price">55,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g8.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Midi Skirt</p>
+                                <div class="p-box">
+                                    <div class="sale">58,500</div>
+                                    <p class="price">65,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g12.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Utility Pants</p>
+                                <div class="p-box">
+                                    <div class="sale">80,100</div>
+                                    <p class="price">89,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g6.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Fit Shirt</p>
+                                <div class="p-box">
+                                    <div class="sale">56,400</div>
+                                    <p class="price">62,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g10.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Modern Cutout Dress</p>
+                                <div class="p-box">
+                                    <div class="sale">180,500</div>
+                                    <p class="price">190,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g7.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Biker Jacket</p>
+                                <div class="p-box">
+                                    <div class="sale">198,000</div>
+                                    <p class="price">220,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image/g9.jpg" alt="">
+                            <div class="product-box">
+                                <p class="name">Cotton Trousers</p>
+                                <div class="p-box">
+                                    <div class="sale">80,100</div>
+                                    <p class="price">89,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </section>
+            <section class="s2">
+                    <div class="line">
+                        <div class="name-box">
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                            <h3>GIGELLE</h3>
+                        </div>
+                    </div>
+            </section>
+            <section class="s3">
+                <div class="t-box">
+                    <h2>FIT CHECK</h2>
+                    <p class="all">전체보기▶︎</p>
+                </div>
+                <div class="fitbox">
+                    <div class="left">
+                        <div class="cloth">
+                            <div class="s-cloth">
+                                <img src="image/c1.jpg" alt="">
+                                <img src="image/c2.jpg" alt="">
+                                <img src="image/c3.jpg" alt="">
+                                <img src="image/c1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="person">
+                            <div class="s-person">
+                                <img src="image/p1.jpg" alt="">
+                                <img src="image/p2.jpg" alt="">
+                                <img src="image/p3.jpg" alt="">
+                                <img src="image/p1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-clothes">
+                        <div class="sm">
+                            <img src="image/sm1.jpg" alt="">
+                        </div>
+                        <div class="sm">
+                            <img src="image/sm2.jpg" alt="">
+                        </div>
+                        <div class="sm">
+                            <img src="image/sm3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s4-0">
+                <img src="image/gigelle.jpg" alt="">
+            </section>
+            <section class="s6">
+                <div class="t-box">
+                    <h2>THE CLASSIC</h2>
+                    <p class="all">전체보기▶︎</p>
+                    <p>: 시크와 클래식, 그 사이의 지젤</p>
+                </div>
+                <div class="swiper items2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img src="image/g14.jpg" alt="">
+                                <div class="text-box">
+                                    <h3>2025 DirtyWork Classic</h3>
+                                    <div class="bt">자세히보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img src="image/g15.jpg" alt="">
+                                <div class="text-box">
+                                    <h3>RAINY SUMMER EDITION</h3>
+                                    <div class="bt">구매하기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img src="image/g17.jpg" alt="">
+                                <div class="text-box">
+                                    <h3>THIS IS GIGELLE</h3>
+                                    <div class="bt">자세히보기</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img src="image/g16.jpg" alt="">
+                                <div class="text-box">
+                                    <h3>BASIC AND CHIC</h3>
+                                    <div class="bt">구매하기</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s5">
+                <div class="i-box">
+                    <div class="left">
+                        <img src="image/g3.jpg" alt="">
+                        <div class="t-box">
+                            <h2>ACC EDIT</h2>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="image/g4.jpg" alt="">
+                        <div class="t-box">
+                            <h2>NEW COLLECTION</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s4">
+                <div class="t-box">
+                    <h2>BEST</h2>
+                    <p class="all">전체보기▶︎</p>
+                </div>
+                <div class="swiper items">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img class="img1" src="image/g13.jpg" alt="">
+                                <img class="img2" src="image/pant.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3>CLASSIC SLACKS</h3>
+                                <div class="sale">
+                                    <p class="salep">65,504</p>
+                                    <p class="price">89,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img class="img1" src="image/g18.jpg" alt="">
+                                <img class="img2" src="image/bag4.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3>PUZZLE BAG_CAMEL</h3>
+                                <div class="sale">
+                                    <p class="salep">73,100</p>
+                                    <p class="price">79,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img class="img1" src="image/g19.jpg" alt="">
+                                <img class="img2" src="image/bag2.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3>BIKER BAG_BROWN</h3>
+                                <div class="sale">
+                                    <p class="salep">53,100</p>
+                                    <p class="price">59,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img class="img1"  src="image/g20.jpg" alt="">
+                                <img class="img2" src="image/bag1.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3>BIKER BAG_BLACK
+                                </h3>
+                                <div class="sale">
+                                    <p class="salep">53,00</p>
+                                    <p class="price">59,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img class="img1" src="image/g21.jpg" alt="">
+                                <img class="img2" src="image/bag3.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3>PUZZLE BAG_BROWN</h3>
+                                <div class="sale">
+                                    <p class="salep">73,100</p>
+                                    <p class="price">79,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="i-box">
+                                <img src="image/g22.jpg" alt="">
+                                <img class="img2" src="outer.jpg" alt="">
+                            </div>
+                            <div class="text-box">
+                                <h3>LEATHER JACKET</h3>
+                                <div class="sale">
+                                    <p class="salep">269,200</p>
+                                    <p class="price">359,000</p>
+                                </div>
+                            </div>
+                        </div>.
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <div class="last_pc">
+                <div class="sns">
+                    <i class="fa-brands fa-kakao-talk"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="brand">
+                    <p>문의하기</p>
+                    <p>고객 서비스</p>
+                    <p>개인정보 처리방침</p>
+                    <p>브랜드 스토리</p>
+                    <p>법적 고지</p>
+                </div>
+                <div class="contact">
+                    <p> GG COMPANY | 대표자명: 홍길동 | 사업자번호: 000-00-00000 | 통신판매신고번호: 제 2025-서울중구-0000호(사업자 정보 확인↗)  | 이메일 문의: contact@gigelle.co.kr | 개인정보보호책임자: 홍길동 | 주소: 서울특별시 중구 | 대표번호:0000-0000</p>
+                    <p>© GG CORPORATION. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="last_mob">
+                    <div class="contact">
+                        <p>© GG CORPORATION. All rights reserved.</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <hr>
+                    <div class="se_con">
+                        <div class="brand">
+                            <p>문의하기</p>
+                            <p>고객 서비스</p>
+                            <p>개인정보 처리방침</p>
+                            <p>브랜드 스토리</p>
+                            <p>법적 고지</p>
+                        </div>
+                        <hr>
+                        <div class="call">
+                            <p>CONTACT US</p>
+                            <p>contact@gigelle.co.kr</p>
+                            <p>cs : 0000-0000</p>
+                            <p>kakao : @gigelle</p>
+                            <p>insta : @gigelle_official</p>
+                        </div>
+                    </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Swiper 초기화
+  const mainSwiper = new Swiper(".main_image", {
+    loop: true,
+    autoplay: { delay: 15000 },
+  });
+
+  const newdropSwiper = new Swiper(".newdrop", {
+    loop: true,
+    autoplay: { delay: 5000 },
+    slidesPerView: 5,
+    centeredSlides: true,
+    spaceBetween: 15,
+    breakpoints: {
+      1: { slidesPerView: 3 },
+      750: { slidesPerView: 3 },
+      1024: { slidesPerView: 5 }
+    }
+  });
+
+  const itemsSwiper = new Swiper(".items", {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    breakpoints: {
+      750: { slidesPerView: 4, spaceBetween: 15 },
+      1024: { slidesPerView: 5, spaceBetween: 30 }
+    }
+  });
+
+  const items2Swiper = new Swiper(".items2", {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    breakpoints: {
+      1: { slidesPerView: 1.2 },
+      750: { slidesPerView: 2.5 }
+    }
+  });
+
+  // Section2 - nameBox 텍스트 복제 (무한 스크롤 느낌)
+  const nameBox = document.querySelector(".name-box");
+  if (nameBox) {
+    nameBox.innerHTML += nameBox.innerHTML;
+  }
+
+  // PC 메뉴 - hover 시 서브메뉴 열기/닫기
+  const pcNav = document.querySelector("nav .pc");
+  const menuli = document.querySelectorAll("nav .menu > li");
+  menuli.forEach(li => {
+    const submenu = li.querySelector(".s-menu");
+    if (!submenu) return;
+    li.addEventListener("mouseenter", () => {
+      submenu.style.display = "block";
+      submenu.style.maxHeight = submenu.scrollHeight + "px";
+      pcNav.style.height = "310px";
+    });
+    li.addEventListener("mouseleave", () => {
+      submenu.style.display = "none";
+      submenu.style.maxHeight = "0px";
+      pcNav.style.height = "105px";
+    });
+  });
+
+  // S3 fit check 클릭 슬라이드 제어
+  const smList = document.querySelectorAll(".s3 .small-clothes .sm");
+  const cloth = document.querySelector(".s3 .cloth .s-cloth");
+  const person = document.querySelector(".s3 .person .s-person");
+  let currentIndex = 0;
+  smList.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      currentIndex = i;
+      updateFitCheck();
+    });
+  });
+  window.addEventListener("resize", updateFitCheck);
+
+  function updateFitCheck() {
+    if (!cloth || !person) return;
+    const clothw = cloth.offsetWidth / 4;
+    const personw = person.offsetWidth / 4;
+    cloth.style.transform = `translateX(${-clothw * currentIndex}px)`;
+    person.style.transform = `translateX(${-personw * currentIndex}px)`;
+  }
+  updateFitCheck();
+
+  // 모바일 메뉴 내부 SHOP 메뉴 토글
+  const shopArrow = document.querySelector('#shop-arrow');
+  const shopMenu = document.querySelector('#shopMenu');
+  const shopBack = document.querySelector('#shop-back');
+  shopArrow.addEventListener('click', () => shopMenu.classList.add('active'));
+  shopBack.addEventListener('click', () => shopMenu.classList.remove('active'));
+
+  // 모바일 메뉴 내부 COLLECTION 메뉴 토글
+  const collectionArrow = document.querySelector('#collection-arrow');
+  const collectionMenu = document.querySelector('#collectionMenu');
+  const collectionBack = document.querySelector('#collection-back');
+  collectionArrow.addEventListener('click', () => collectionMenu.classList.add('active'));
+  collectionBack.addEventListener('click', () => collectionMenu.classList.remove('active'));
+
+  // 모바일 햄버거 메뉴 토글
+  const hamburger = document.getElementById('hamburger');
+  const mobMenu = document.querySelector('.mob_menu');
+  hamburger.addEventListener('click', () => {
+    const isActive = mobMenu.classList.toggle('active');
+    hamburger.classList.toggle('fa-bars', !isActive);
+    hamburger.classList.toggle('fa-xmark', isActive);
+    if(isActive){
+        mbmenu.style.backgroundColor = "#fafafa"
+        mbmenu.style.color = "#222222"
+    }
+    else{
+        mbmenu.style.backgroundColor = "#fff0"
+        mbmenu.style.color = "#fff"
+        shopMenu.classList.remove('active')
+        collectionMenu.classList.remove('active')
+    }
+  });
+
+  // footer 모바일 하단 메뉴 열기/닫기
+  const footerArrow = document.querySelector("footer .last_mob .contact i");
+  const footerSecon = document.querySelector("footer .last_mob .se_con");
+  footerArrow.addEventListener("click", () => {
+    footerSecon.classList.toggle("active");
+    footerArrow.classList.toggle("active");
+  });
+});
+
+// window scroll 이벤트 (throttle 적용 권장)
+const throttle = (fn, wait = 100) => {
+  let last = 0;
+  return () => {
+    const now = Date.now();
+    if (now - last >= wait) {
+      fn();
+      last = now;
+    }
+  };
+};
+
+const s5 = document.querySelector(".s5");
+const leftImg = s5?.querySelector(".left img");
+const rightImg = s5?.querySelector(".right img");
+
+const mbmenu = document.querySelector("nav .mob");
+const pcafter = document.querySelector("nav .pc");
+const de = document.documentElement;
+
+
+window.addEventListener("scroll", throttle(() => {
+  if (!s5 || !leftImg || !rightImg || !mbmenu || !pcafter) return;
+
+  // s5 이미지 줌아웃 애니메이션 토글
+  const s5Top = s5.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  if (s5Top < windowHeight * 0.8) {
+    leftImg.classList.add("zoomout");
+    rightImg.classList.add("zoomout");
+  } else {
+    leftImg.classList.remove("zoomout");
+    rightImg.classList.remove("zoomout");
+  }
+
+  // nav 색상 변경 (스크롤 150px 이상 시)
+  if (de.scrollTop >= 150) {
+    mbmenu.style.backgroundColor = "#fff";
+    mbmenu.style.color = "#000";
+    mbmenu.style.textShadow = "0px 0px 0px #0000";
+    mbmenu.style.boxShadow = "1px 1px 50px #0003";
+    pcafter.style.backgroundColor = "#fff4";
+    pcafter.style.backdropFilter = "blur(5px)";
+    pcafter.style.color = "#000";
+    pcafter.style.textShadow = "1px 1px 4px #fff2";
+  } else {
+    mbmenu.style.backgroundColor = "#fff0";
+    mbmenu.style.color = "#fff";
+    mbmenu.style.boxShadow = "1px 1px 50px #0000";
+    pcafter.style.backgroundColor = "#fff0";
+    pcafter.style.backdropFilter = "blur(0px)";
+    pcafter.style.color = "#fff";
+  }
+}, 100));
+  </script>
+</html>
