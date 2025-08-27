@@ -694,7 +694,7 @@
     .mob-menu{
         position: absolute;
         right: 0; top: 0;
-        width: 70%; height: 130vh;
+        width: 70%; height: 100vh;
         background-color: #1c96ce;
         transition: transform 0.4s ease;
         transform: translateX(100%);
