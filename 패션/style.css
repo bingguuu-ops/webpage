@@ -693,6 +693,9 @@
         .s5 .i-box .right .t-box{
             font-size: 30px;
         }
+        .s4 .items .swiper-slide .text-box{
+            font-size: 13px;
+        }
     }
 .mob .mob_menu{
     padding: 40px 40px; box-sizing: border-box;
