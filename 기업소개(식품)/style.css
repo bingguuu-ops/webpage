@@ -736,6 +736,9 @@ footer .final .bottom .copyright{
     .s5 .new-box .news .text-box p:nth-child(3){
         display: none;
     }
+       footer .final{
+        padding: 100px 30px; box-sizing: border-box;
+    }
     footer .final .top .logo-box .left{
      height: 100px;
      width: 100px;
@@ -745,10 +748,11 @@ footer .final .bottom .copyright{
     }
     footer .final .top .logo-box .right{
         font-size: 14px;
+        width: 200px;
     }
     footer .final .middle .notice{
         margin-bottom: 30px;
-        font-size: 16px;
+        font-size: 14px;
     }
     
     footer .final .bottom .inform p{
@@ -756,8 +760,8 @@ footer .final .bottom .copyright{
     }
     footer .final .top .family li {
     gap: 10px;
-    width: 200px;
-    font-size: 14px;
+    width: 180px;
+    font-size: 12px;
     cursor: pointer;
     }
     .s4 .brands{
@@ -765,5 +769,6 @@ footer .final .bottom .copyright{
     }
     .s4 .brands .swiper-slide .text-box{
    font-size: 14px;
+ }
  }
 }
