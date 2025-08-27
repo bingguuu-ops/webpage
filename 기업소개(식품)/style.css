@@ -613,8 +613,8 @@ footer .final .bottom .copyright{
     justify-content: end;
     }
     header .header-img .header-text{
-        top: 75%; left: 60px;
-        font-size: 24px;
+        top: 65%; left: 40px;
+        font-size: 16px;
         color: #f5f5f5;
         text-shadow: 2px 2px 4px #0003;
     }
@@ -623,14 +623,14 @@ footer .final .bottom .copyright{
     }
     .s1 .sub-title{
         width: 90%;
-        font-size: 24px;
+        font-size: 14px;
     }
     .s1 .title h2{
-      font-size: 45px;
+      font-size: 34px;
     }
     .line{
-        height: 8px;
-        margin: 0 20px;
+        height: 5px;
+        margin: 0 10px;
     }
     #strongText.show .line {
     width: 50px;
@@ -730,8 +730,11 @@ footer .final .bottom .copyright{
         width: 100%;
     }
     .s5 .new-box .news .text-box p{
-        font-size: 12px;
+        font-size: 10px;
         line-height: 1.2;
+    }
+    .s5 .new-box .news .text-box p:nth-child(3){
+        display: none;
     }
     footer .final .top .logo-box .left{
      height: 100px;
